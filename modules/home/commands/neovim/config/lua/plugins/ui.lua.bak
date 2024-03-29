@@ -1,0 +1,33 @@
+return {
+	{
+		"nvimdev/dashboard-nvim",
+		enabled = false,
+		opts = function(_, opts)
+			local logo = [[
+                     ........                     
+               :~7?JJYYYYYYYYJJ?7~:               
+           .^?YYYYYYYYYYYYYYYYYYYYYY?^.           
+         :7YYYYYYYYYYYYYYYYYYYYYYYYYYYY7:         
+       .7YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY7.       
+      ^YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY^      
+     ~YYYYYYYYYYYYYYYYJ?77?JYYYYYYYYYYYYYYYY~     
+    ^YYYYYYYYYYYYYY7:.      .:7YYYYYYYYYYYYYY^    
+    JYYYYYYYYYYYY?.            .?YYYYYYYYYYYYJ    
+   ^YYYYYYYYYYYY?                ?YYYYYYYYYYYY^   
+   7YYYYYYYYYYYY:                :YYYYYYYYYYYY7   
+   7YYYYYYYYYYYY:                :YYYYYYYYYYYY7   
+   ~YYYYYYYYYYYY7                7YYYYYYYYYYYY~   
+   .YYYYYYYYYYYYY7.            .7YYYYYYYYYYYYY.   
+    ~YYYYYYYYYYYYYY7.        .7YYYYYYYYYYYYYY~    
+     !YYYYYYYYYYYYY?          ?YYYYYYYYYYYYY!     
+      ^YYYYYYYYYYYJ.          .JYYYYYYYYYYY^      
+       .7YYYYYYYYY:            :YYYYYYYYY7.       
+         .7YYYYYY~              ~YYYYYY7.         
+            :7JY7                7YJ7^            
+               .                  .               
+      ]]
+			logo = string.rep("\n", 6) .. logo .. "\n\n"
+			opts.config.header = vim.split(logo, "\n")
+		end,
+	},
+}
